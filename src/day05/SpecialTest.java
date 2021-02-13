@@ -1,5 +1,7 @@
 package day05;
 
+import sun.reflect.generics.tree.Tree;
+
 import java.util.Iterator;
 import java.util.TreeSet;
 
@@ -30,9 +32,16 @@ public class SpecialTest {
         System.out.println("**************************************");
 
         ////foreach方法 结果是错误的
-//        for (Object object:tree){
-//            System.out.println(tree);
-//        }
+        for (Object object:tree){
+            System.out.println(object);
+        }
+
+        // 获取头元素，并且删除
+        while (!tree.isEmpty()){
+            Employee first =  (Employee)tree.first();
+            System.out.println(first);
+            tree.remove(first);
+        }
 
     }
 }
